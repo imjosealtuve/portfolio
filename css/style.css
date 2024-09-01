@@ -280,6 +280,15 @@ header div p{
     .header{
         margin-bottom: 60px;
     }
+    #light-blue, #light-purple, #light-blue2, #light-purple2, #light-blue3, #light-purple3{
+        display: none;
+    }
+    #what-i-studied{
+        /* margin-left: -115px; */
+    }
+    #portfolio-title, #subtitle{
+        margin-left: 0px;
+    }
 }
 
  /* ==== SECTOPM WHO I AM ====*/
@@ -509,25 +518,31 @@ header div p{
     position: relative;
     z-index: 3;
     background-color: var(--white);
-    padding: 100px;
+    padding-top: 100px;
     border-radius: 80px;
 }
 
-#portfolio h1 {
+#portfolio-title {
+    margin-left: 100px;
     background-color: var(--white);
     color: var(--gray);
     font-size: clamp(2rem,6vw,5rem);
     font-weight: var(--title-size);
     letter-spacing: clamp(-0.5rem, 0.1vw, -1px);
+   
 }
 #portfolio h2{
     margin-top: -10px;
     background-color: var(--white);
     color: var(--dark-blue);
     font-weight: var(--subtitle-size);
-    font-size: clamp(1rem, 2vw, 2rem);;
-}
+    font-size: clamp(1rem, 2vw, 2rem);
 
+}
+#subtitle{
+    margin-right: 100px;
+    margin-left: 100px; 
+}
 #container-portfolio {
     background-color: var(--white);
     display: grid;
@@ -536,6 +551,8 @@ header div p{
     overflow-x: auto; /* Habilita el scroll horizontal */
     gap: 1rem; /* Espacio entre las tarjetas */
     padding-bottom: 1rem; /* Espacio para la barra de desplazamiento */
+    margin-right: 60px;
+    margin-left: 60px;
 }
 
 #container-portfolio::-webkit-scrollbar {
@@ -647,6 +664,7 @@ header div p{
 section{
     margin-top: 90px;
     padding: 20px;
+    padding-bottom: 100px;
     width: 90vw;
     background-color: var(--white);
     z-index: 2;
@@ -668,7 +686,7 @@ section{
     overflow-y: auto; /* Solo permite scroll vertical */
     overflow-x: hidden; /* Oculta el scroll horizontal */
     box-sizing: border-box;
-    margin-left: clamp(-200px, -8vw, -160px);
+    margin-left: clamp(-20px, -8vw, -160px);
 }
 
 #what-i-studied::-webkit-scrollbar{
@@ -757,9 +775,11 @@ section{
 
 #estudio-title{
     align-self: center; /* Alinea verticalmente al centro */
-    text-align: left; 
     font-size: clamp(2rem,6vw,5rem);
-    margin-left: clamp(-400px, -5vw, -200px);
+    margin-left: clamp(-15px, -1.5vw, -200px);
+    background-color: var(--white);
+    color: var(--gray);
+    text-align: center;
 }
 #light-blue3{
     pointer-events: none;
