@@ -136,7 +136,7 @@ color:var(--black);
 }
 #container-title div{
     display: flex;
-    width: 40%;
+    width: 50%;
     justify-content: space-between;
     padding: 4px 10px;
     background-color: transparent;
