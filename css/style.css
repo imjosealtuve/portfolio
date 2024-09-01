@@ -19,18 +19,18 @@
     box-sizing: auto;
     font-family: Inter;
     background-color: var(--black);
-    
 }
 
 body{
-    overflow-x: hidden;
+    
     height: 100%;
+    overflow-x: hidden !important;
     #overlay{
         position: fixed;
         top: 0;
         left: 0;
         height: auto;
-        width: 100vw;
+        width: 100%;
         z-index: 10 !important;
         mix-blend-mode: soft-light;
         opacity: .8;
@@ -119,30 +119,115 @@ color:var(--black);
     background-color: var(--white);
     margin: 0;
     height: 75vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40rem, 1fr));
+    justify-items: center;
+    align-items: center;
+    place-content: center;
+}
+#container-pic, #container-title{
+    background-color: transparent;
+}
+#container-pic{
+    text-align: center;
+}
+#container-title{
+    margin-left: clamp(10px, 0.1vw, 10px)
+}
+#container-title div{
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+    padding: 4px 10px;
+    background-color: transparent;
+    border: 1px solid #8d949b5d;
+    border-radius: 14px;
+    color: var(--gray)
+}
+#container-title div button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    height: 26px;
+    color: var(--gray);
+    border-radius: 6px;
+}
+#container-title div button:hover{
+    background-color: #8d949b5d;
+    width: 100%;
+}
+#container-title div button:nth-child(1){
+    margin-right: 4px;
+}
+#languages .button-active-language{
+    background-color: var(--dark-blue);
+    color: white;
+}
+#languages .button-active-language:hover{
+    background-color: var(--dark-blue);
+    color: white;
+}
+#container-pic p{
+    background-color: var(--white);
+    color: var(--gray);
+    font-weight: var(--title-size);
+    font-size: clamp(1.0rem,2.6vw,3.6rem);
+    text-align: center;
+    letter-spacing: clamp(-2px,-3px,-3px);
+}
+#container-pic p:nth-child(3){
+    font-size: clamp(0.4rem,1.6vw,2.0rem);
+    font-weight: var(--subtitle-size);
+    letter-spacing: 4px;
+}
+#container-pic button{
+    background-color: transparent;
+    margin-top: 10px;
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 30px;
+    border: 1px solid var(--gray);
+    color: var(--gray);
+    border-radius: 100px;
+    cursor: pointer;
+}
+#container-pic button:hover{
+    background-color: var(--black);
+    color: white;
+    i{
+        color: var(--blue);
+    };
+}
+#container-pic button i{
+    background-color: transparent;
+}
+
+#container-title{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    text-align:left;
 }
+#pic{
+    width: clamp(14rem,18vw,32rem);
+    background-color: transparent;
+}
+
 #banner-title{
-    letter-spacing: -3px;
-    background-color: var(--white);
-    color: var(--gray);
-    font-weight: var(--title-size);
-    justify-content: center;
-    text-align: center;
-    font-size: clamp(2rem,3vw,4rem);
-}
-#banner-title2{
-    /* margin-top: clamp(0px, 0px, 0px); */
     letter-spacing: clamp(-2px,-3px,-3px);
     background-color: var(--white);
-    line-height: clamp(3rem, 4.8vw, 3.5rem);
-    font-size: clamp(3rem,4vw,5rem);
     color: var(--gray);
     font-weight: var(--title-size);
-    justify-content: center;
-    text-align: center;
+    font-size: clamp(2rem,4vw,5rem);
+}
+#banner-title2{
+    letter-spacing: clamp(-2px,-3px,-3px);
+    background-color: var(--white);
+    line-height: clamp(3rem, 5.8vw, 4.5rem);
+    font-size: clamp(3rem,6vw,7rem);
+    color: var(--gray);
+    font-weight: var(--title-size);
 }
 
 #hand{
@@ -286,11 +371,12 @@ header div p{
 #container{
     max-width: 66%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: 6%;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 100px;
+    justify-items: center;
 }
 #container div:nth-child(2) h2{
     margin-bottom: 10px;
@@ -299,7 +385,7 @@ header div p{
 #container div:nth-child(2){
     align-content: center;
     color: var(--white);
-    padding-left: 60px;
+    /* padding-left: 60px; */
 }
 
 #word-skills{
@@ -320,6 +406,7 @@ header div p{
     margin-top: 12px;
     padding-left: 40px;
     padding-right: 0px;
+    width: 19rem;
 }
 .button-skill-2{
     display: flex;
@@ -333,6 +420,7 @@ header div p{
     margin-top: 12px;
     padding-left: 40px;
     padding-right: 0px;
+    width: 19rem;
 }
 .svg-python{
     position: relative;
@@ -539,7 +627,6 @@ header div p{
     padding-left: 4px;
     padding-right: 2px;
 }
-
 #pellizco{
     position: relative;
     opacity: 100%;
@@ -551,7 +638,6 @@ header div p{
 
 
 section{
-    
     margin-top: 90px;
     padding: 20px;
     width: 90vw;
@@ -560,13 +646,13 @@ section{
     display: grid;
     place-content: center;
     place-items: center;
-    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));   
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));   
     grid-gap: 20px; /* Añade espacio entre los elementos */
     align-items: start; /* Alinea los elementos al inicio verticalmente */
 }
 #what-i-studied{
     display: inline-block;
-    width: 100%;
+    width: 80%;
     height: 85vh;
     background-color: var(--black);
     padding: 30px;
@@ -595,7 +681,7 @@ section{
 #what-i-studied div div h1{
     font-size:  0.8rem;
     letter-spacing: 0px;
-    background-color: var(--black);
+    background-color: transparent;
     color: var(--white);
 }
 #what-i-studied div div h2{
@@ -623,6 +709,7 @@ section{
     box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
     width: 100%; 
 }
+
 #subcont-pos{
     display: block;
 }
@@ -646,7 +733,7 @@ section{
     position: absolute;
     z-index: 4;
     right: 510px;
-    top: 1100px;
+    top: 1300px;
     background-color: transparent;
     width: 150px;
 }
@@ -678,6 +765,32 @@ section{
     opacity: .5;
     z-index: 4;
 }
+.point-of-study-2{
+    z-index: 0;
+    margin-top: 10px;
+    border: 1px solid var(--white);
+    border-radius: 20px;
+    padding: 12px 28px;
+    display: flex;
+    background-color: #148cfb;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Asegura que el padding no cause desbordamiento */
+    width: 100%; 
+}
+.point-of-study-2 img{
+    background-color: transparent;
+}
+#subcont-pos-2 h1, #subcont-pos-2 p{
+    background-color: var(--blue) !important;
+    color: var(--white) !important;
+}
+#subcont-pos-2 p{
+    font-size: 0.7rem;
+}
+#subcont-pos-2{
+    background-color: transparent;
+}
 #light-purple3{
     user-select: none;
     position: absolute;
@@ -689,6 +802,7 @@ section{
     pointer-events: none;
     z-index: 4;
 }
+
 @media screen and (max-width: 768px) {
     #img-book,
     #img-pc,
@@ -730,6 +844,35 @@ section{
     font-size: clamp(1rem, 2vw, 2rem);;
     color: var(--white);
     background-color: var(--dark-blue);
+    justify-items: center;
+}
+#contact-me div h2 span{
+    background-color: transparent;
+}
+#contact-me div h2 button{
+    color: var(--white);
+    width: 5rem;
+    border: 1px solid var(--white);
+    background-color: var(--blue);
+    border-radius: 10px;
+    height: 2rem;
+    
+    cursor: pointer;
+    i{
+        background-color: transparent;
+    }
+}
+#contact-me div h2 button:hover{
+    background-color: var(--black);
+    border: 1px solid var(--blue);
+    i{
+        color: var(--blue);
+    }
+
+}
+#copy, #copy2{
+    position: relative;
+    top: -4px;
 }
 #contact-me form{
     margin-top:80px;
@@ -801,7 +944,7 @@ footer div{
     display: inline-block;
     width: auto;
 }
-.ri-github-fill{
+.ri-github-fill, .ri-linkedin-box-fill{
     color: var(--white);
     font-size: 6vh;
     transition: 0.3s;
@@ -809,10 +952,10 @@ footer div{
     transition: 0.3s;
 }
 
-.ri-github-fill:not(:hover){
+.ri-github-fill:not(:hover), .ri-linkedin-box-fill:not(:hover){
     transition: 0.3s
 }
-.ri-github-fill:hover{
+.ri-github-fill:hover, .ri-linkedin-box-fill:hover{
     font-size: 6.5vh;
     color: var(--dark-blue)
 }
