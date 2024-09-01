@@ -273,7 +273,14 @@ header div p{
     margin-left: -0.9px;    
 
 }
-
+@media (max-width: 768px) {
+    #arrow-button{
+        display: none;
+    }
+    .header{
+        margin-bottom: 60px;
+    }
+}
 
  /* ==== SECTOPM WHO I AM ====*/
 #section-who-i-am{
