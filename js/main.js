@@ -7,6 +7,7 @@ let clickEnglish = document.getElementById('bs-english');
 let clickFrench = document.getElementById('bs-french');
 let clickWordpress = document.getElementById('bs-wordpress');
 let paragraph = document.getElementById('paragraph');
+let clickPhotoshop = document.getElementById('bs-photoshop');
 
 clickHtml.addEventListener('click', function() {
     let title = "HTML";
@@ -43,6 +44,10 @@ clickWordpress.addEventListener('click', function() {
     let texto1 = "This tool was my introduction and gateway to the world of website construction. I have designed websites, landing pages, and e-commerce sites for several companies, enhancing their business objectives and missions by giving them their own space on the web. At the same time, it gradually led me to the field of web development and eventually to software development.";
     cambiarTexto(texto1, title);
 });
+// Codigo para el portfolio de diseño
+
+
+
 
 function cambiarTexto(value, value2) {
     h2.textContent = value2;

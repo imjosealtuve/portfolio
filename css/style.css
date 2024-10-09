@@ -229,7 +229,27 @@ color:var(--black);
     color: var(--gray);
     font-weight: var(--title-size);
 }
-
+.banner-title{
+    letter-spacing: clamp(-2px,-3px,-3px);
+    background-color: var(--white);
+    color: var(--gray);
+    font-weight: var(--title-size);
+    font-size: clamp(2rem,4vw,5rem);
+}
+.banner-title2{
+    letter-spacing: clamp(-2px,-3px,-3px);
+    background-color: var(--white);
+    line-height: clamp(3rem, 5.8vw, 4.5rem);
+    font-size: clamp(3rem,6vw,7rem);
+    color: var(--gray);
+    font-weight: var(--title-size);
+}
+.bt{
+    font-size: clamp(2rem,4vw,5rem);
+}
+.bt2{
+    font-size: clamp(1.6rem,4vw,4rem);
+}
 #hand{
     background-color: var(--white);
     width: clamp(20px,40px,80px);
@@ -438,15 +458,25 @@ header div p{
     padding-right: 0px;
     width: 19rem;
 }
-.svg-python{
+.svg-python {
     position: relative;
     margin-right: 10px;
-    padding: 10px 14px 12px  4px;
+    padding: 10px 14px 12px 4px;
     flex-direction: column;
-    color: white;
+    fill: white;
     height: auto;
     width: 26px;
-    fill: var(--white);
+    background-color: transparent;
+    overflow: visible;
+  }
+.svgl{
+    position: relative;
+    margin-right: 10px;
+    padding: 10px 14px 12px 4px;
+    flex-direction: column;
+    fill: white;
+    height: auto;
+    width: 26px;
     background-color: transparent;
     overflow: visible;
 }
@@ -485,7 +515,9 @@ header div p{
     font-size: 40px;
     border: none;
 }
-
+.wordpress-icon{
+    color: var(--blue)
+}
 .arrow-right{
     visibility: hidden;
     margin-left: 8px;
@@ -702,7 +734,9 @@ section{
     color: var(--gray );
     font-weight: 500;
 }
-
+.what-i-studied-2{
+    width: 50vw;
+}
 #what-i-studied div div h1{
     font-size:  0.8rem;
     letter-spacing: 0px;
@@ -988,4 +1022,9 @@ footer div{
 }
 a{
     text-decoration: none;
+}
+#footer{
+    color: white;
+    font-weight: 700;
+    margin-top: 18px;
 }
